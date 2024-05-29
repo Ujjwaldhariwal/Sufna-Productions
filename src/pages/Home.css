@@ -1,0 +1,99 @@
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: Playfair Display;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0a5647;
+    font-size: 4rem;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .roller {
+    font-family: Playfair Display;
+    font-size: smaller;
+    height: 4.125rem;
+    line-height: 4rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #117763;
+  }
+  
+  #spare-time {
+    font-family: Playfair Display;
+    font-size: 1.2rem;
+    font-style: italic;
+    letter-spacing: .4rem;
+    margin: 0; /* Remove default margin */
+    color: #159b81;
+    white-space: nowrap; 
+  }
+  
+  .roller #rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      top: 0;
+    }
+    25% {
+      top: -4rem;
+    }
+    50% {
+      top: -8rem;
+    }
+    72.5% {
+      top: -12.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 2.125rem;
+    }
+  
+    .roller {
+      height: 2.6rem;
+      line-height: 2.125rem;
+    }
+  
+    #spare-time {
+        letter-spacing: .0001rem;
+      font-size: 1rem;
+      
+    }
+  
+    .roller #rolltext {
+      animation: slide-mob 5s infinite;
+    }
+  
+    @keyframes slide-mob {
+      0% {
+        top: 0;
+      }
+      25% {
+        top: -2.125rem;
+      }
+      50% {
+        top: -4.25rem;
+      }
+      72.5% {
+        top: -6.375rem;
+      }
+    }
+  }
+  
