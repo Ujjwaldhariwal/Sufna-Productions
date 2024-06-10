@@ -1,0 +1,53 @@
+/* Portfolio.css */
+
+.image-container {
+  overflow: hidden;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover .portfolio-image {
+  transform: scale(1.1);
+}
+
+.carousel-container {
+  position: absolute;
+  bottom: 150px;
+  left: 10px;
+  right: 10px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: none;
+  }
+
+  .carousel-container {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .carousel-container {
+    display: none;
+  }
+}
+
+.slick-slide img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slick-active img {
+  opacity: 1;
+}
+
+.slick-inactive img {
+  opacity: 0.5;
+}

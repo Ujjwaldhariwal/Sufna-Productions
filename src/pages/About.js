@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
 // import cursor context
 import { CursorContext } from '../context/CursorContext';
+import './btn.css';
 
 const About = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -41,15 +42,22 @@ const About = () => {
           >
             <h1 className='h1'>About Us</h1>
             <p className='mb-12 max-w-sm'>
-            At Sufna Productions, we're not just another media production agency - we're the ,
+              At Sufna Productions, we're not just another media production agency - we're the ,
               <b> storytellers, the visionaries</b>  and the creative engine that brings your brand's narrative to life.
               <br />
               <br />
               We are passionate about helping modern-day brands make captivating, creative, and high-quality advertisements
-that leave a lasting impression.
+              that leave a lasting impression.
             </p>
-            <Link to={'/portfolio'} className='btn'>
-              View Our work
+            <Link to={'/portfolio'} >
+              <button class="btn-abu">
+                <div> Our Work</div>
+                <svg fill="none" viewBox="0 0 24 24" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="white" d="M11.6801 14.62L14.2401 12.06L11.6801 9.5"></path>
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="white" d="M4 12.0601H14.17"></path>
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="white" d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20"></path>
+                </svg>
+              </button>
             </Link>
           </motion.div>
         </div>

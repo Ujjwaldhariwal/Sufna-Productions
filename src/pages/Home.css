@@ -1,99 +1,135 @@
+/* Styles for video background */
+.video-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  opacity: .8;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Hide video controls */
+.bg-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.bg-video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.bg-video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+/* Main content styles */
 .main {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  h1 {
-    font-family: Playfair Display;
-    text-align: center;
-    text-transform: uppercase;
-    color: #0a5647;
-    font-size: 4rem;
-    margin: 0; /* Remove default margin */
-  }
-  
-  .roller {
-    font-family: Playfair Display;
-    font-size: smaller;
-    height: 4.125rem;
-    line-height: 4rem;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #117763;
-  }
-  
-  #spare-time {
-    font-family: Playfair Display;
-    font-size: 1.2rem;
-    font-style: italic;
-    letter-spacing: .4rem;
-    margin: 0; /* Remove default margin */
-    color: #159b81;
-    white-space: nowrap; 
-  }
-  
-  .roller #rolltext {
-    position: absolute;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #014c3d; /* Added color for text */
+}
+
+h1 {
+  font-family: Libre Baskerville;
+  text-align: center;
+  text-transform: uppercase;
+  color: #002d24;
+  font-size: 5rem;
+  margin: 0; /* Remove default margin */
+}
+
+.roller {
+  font-family: Playfair Display;
+  font-size: smaller;
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; /* Changed color to match #spare-time */
+}
+
+#spare-time {
+  font-family: Playfair Display;
+  font-size: 1.5rem;
+  font-style: bold;
+  letter-spacing: .2rem;
+  margin: 0; /* Remove default margin */
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;
+}
+
+/* Animation keyframes */
+@keyframes slide {
+  0% {
     top: 0;
-    animation: slide 5s infinite;
   }
-  
-  @keyframes slide {
+  25% {
+    top: -4rem; /* Adjusted for fullscreen */
+  }
+  50% {
+    top: -8rem; /* Adjusted for fullscreen */
+  }
+  72.5% {
+    top: -12.25rem; /* Adjusted for fullscreen */
+  }
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.125rem;
+  }
+
+  .roller {
+    height: 2.6rem;
+    line-height: 2.125rem;
+  }
+
+  #spare-time {
+    letter-spacing: .0001rem;
+    font-size: 1rem;
+  }
+
+  .roller #rolltext {
+    animation: slide-mob 5s infinite;
+  }
+
+  /* Animation keyframes for mobile */
+  @keyframes slide-mob {
     0% {
       top: 0;
     }
     25% {
-      top: -4rem;
+      top: -2.125rem;
     }
     50% {
-      top: -8rem;
+      top: -4.25rem;
     }
     72.5% {
-      top: -12.25rem;
+      top: -6.375rem;
     }
   }
-  
-  @media screen and (max-width: 600px) {
-    h1 {
-      font-size: 2.125rem;
-    }
-  
-    .roller {
-      height: 2.6rem;
-      line-height: 2.125rem;
-    }
-  
-    #spare-time {
-        letter-spacing: .0001rem;
-      font-size: 1rem;
-      
-    }
-  
-    .roller #rolltext {
-      animation: slide-mob 5s infinite;
-    }
-  
-    @keyframes slide-mob {
-      0% {
-        top: 0;
-      }
-      25% {
-        top: -2.125rem;
-      }
-      50% {
-        top: -4.25rem;
-      }
-      72.5% {
-        top: -6.375rem;
-      }
-    }
-  }
-  
+}

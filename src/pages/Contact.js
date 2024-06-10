@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 // import images
 import WomanImg from '../img/contact/woman.png';
 // import motion
@@ -7,9 +7,34 @@ import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
 // import context
 import { CursorContext } from '../context/CursorContext';
+import './btn.css';
 
 const Contact = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "3b6dd913-8563-4ba2-8161-cc8909ce39f6");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
 
   return (
     <motion.section
@@ -27,7 +52,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '100%' }}
             transition={transition1}
-            className='hidden lg:flex bg-[#eef7f9] absolute bottom-0 left-0 right-0 top-72 -z-10'
+            className='hidden lg:flex bg-[#f5f5f5] absolute bottom-0 left-0 right-0 top-72 -z-10'
           ></motion.div>
           {/* text & form */}
           <div
@@ -35,31 +60,41 @@ const Contact = () => {
             onMouseLeave={mouseLeaveHandler}
             className='lg:flex-1 lg:pt-32 px-4'
           >
-            <h1 className='h1'>Contact US</h1>
-            <p className='mb-12'>Your Brand Our Narrative</p>
-            {/* form */}
-            <form className='flex flex-col gap-y-4'>
-              <div className='flex gap-x-10'>
-                <input
-                  className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
-                  type='text'
-                  placeholder='Your name'
-                />
-                <input
-                  className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
-                  type='text'
-                  placeholder='Your email address'
-                />
+            <h1 className='h1'>Contact Us</h1>
+            {result === "Form Submitted Successfully" ? (
+              <div className='flex flex-col gap-y-4 lg:items-center lg:justify-center'>
+                <p className='text-lg font-semibold text-primary'>Form Submitted Successfully</p>
               </div>
-              <input
-                className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
-                type='text'
-                placeholder='Your message'
-              />
-              <button className='btn mb-[30px] mx-auto lg:mx-0 self-start'>
-                Send it
-              </button>
-            </form>
+            ) : (
+              <form className='flex flex-col gap-y-4' onSubmit={onSubmit}>
+                <div className='flex gap-x-10'>
+                  <input
+                    className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
+                    type='text'
+                    name='name'
+                    placeholder='Your name'
+                    required
+                  />
+                  <input
+                    className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
+                    type='email'
+                    name='email'
+                    placeholder='Your email address'
+                    required
+                  />
+                </div>
+                <textarea
+                  className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879] resize-none'
+                  name='message'
+                  placeholder='Your message'
+                  required
+                ></textarea>
+                <button className='button-sub' type='submit'>
+                  Send it
+                </button>
+              </form>
+            )}
+            <span>{result !== "Form Submitted Successfully" && result}</span>
           </div>
           {/* image */}
           <motion.div
@@ -71,7 +106,7 @@ const Contact = () => {
             transition={{ transition: transition1, duration: 1.5 }}
             className='lg:flex-1'
           >
-            <img src={WomanImg} alt='' />
+            <img src={WomanImg} alt='Contact' />
           </motion.div>
         </div>
       </div>

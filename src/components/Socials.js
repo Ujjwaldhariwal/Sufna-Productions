@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-// import icons
-import {
-  ImFacebook,
-  ImInstagram,
-  ImYoutube,
-} from 'react-icons/im';
-// import cursor context
+import { SocialIcon } from 'react-social-icons';
 import { CursorContext } from '../context/CursorContext';
+import './Social.css';
 
 const Socials = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+  const iconStyle = {
+    width: '24px',
+    height: '24px',
+  };
+
   return (
     <div
       onMouseEnter={mouseEnterHandler}
@@ -18,19 +18,13 @@ const Socials = () => {
     >
       <ul className='flex gap-x-4'>
         <li>
-          <a href='http://wwww.facebook.com' target='_blank'>
-            <ImFacebook />
-          </a>
+          <SocialIcon url="https://www.facebook.com/profile.php?id=61550937880697&mibextid=LQQJ4d" className="icon-facebook" style={iconStyle} target="_blank" />
         </li>
         <li>
-          <a href='http://www.instagram.com' target='_blank'>
-            <ImInstagram />
-          </a>
+          <SocialIcon url="https://www.instagram.com/sufna.productions/" className="icon-instagram" style={iconStyle} target="_blank" />
         </li>
         <li>
-          <a href='http://www.youtube.com' target='_blank'>
-            <ImYoutube />
-          </a>
+          <SocialIcon url="https://www.youtube.com/@Sufna.Productions" className="icon-youtube" style={iconStyle} target="_blank" />
         </li>
       </ul>
     </div>
