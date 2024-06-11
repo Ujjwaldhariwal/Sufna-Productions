@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import bgVideo from '../img/header/bg-video.mp4'; // Importing the video
+import bgVideom from '../img/header/bg-videom.mp4'; // Importing the video
 import './Home.css';
 
 
@@ -30,19 +30,19 @@ const Home = () => {
     <>
       <div className="video-bg">
         <video autoPlay loop muted className="bg-video" ref={videoRef}>
-          <source src={bgVideo} type="video/mp4" /> {/* Using imported video */}
+          <source src={bgVideom} type="video/mp4" /> {/* Using imported video */}
           Your browser does not support the video tag.
         </video>
         <div className="main">
-          <h1>Who Are We?
-            <div className="roller">
+          <h1 className='middle'>Who Are We?
+            {/* <div className="roller">
               <span id="rolltext">
                 Artists ?<br />
                 Creators ?<br />
                 Film-Makers ?<br />
                 <span id="spare-time">We Are Sufna Productions</span><br />
               </span>
-            </div>
+            </div> */}
           </h1>
         </div>
       </div>

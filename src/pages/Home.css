@@ -5,6 +5,7 @@
   height: 100vh;
   overflow: hidden;
   opacity: .8;
+  
 }
 
 .bg-video {
@@ -42,13 +43,21 @@
   color: #014c3d; /* Added color for text */
 }
 
-h1 {
+.middle{
   font-family: Libre Baskerville;
   text-align: center;
   text-transform: uppercase;
-  color: #002d24;
+  color: #FFFF00;
   font-size: 5rem;
   margin: 0; /* Remove default margin */
+}
+h1{
+    font-family: Libre Baskerville;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0a5647;
+    font-size: 5rem;
+    margin: 0; /* Remove default margin */
 }
 
 .roller {
@@ -62,7 +71,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff; /* Changed color to match #spare-time */
+  color: #ADD8E6; /* Changed color to match #spare-time */
 }
 
 #spare-time {
@@ -71,7 +80,7 @@ h1 {
   font-style: bold;
   letter-spacing: .2rem;
   margin: 0; /* Remove default margin */
-  color: #ffffff;
+  color: #ADD8E6;
   white-space: nowrap;
 }
 
