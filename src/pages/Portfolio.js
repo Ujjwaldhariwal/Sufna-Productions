@@ -2,13 +2,9 @@ import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import link
 import { Link } from 'react-router-dom';
-// import motion
 import { motion } from 'framer-motion';
-// import transition
 import { transition1 } from '../transitions';
-// import context
 import { CursorContext } from '../context/CursorContext';
 import './Portfolio.css';
 
@@ -38,7 +34,6 @@ const Portfolio = () => {
     >
       <div className='container mx-auto h-full relative'>
         <div className='flex flex-col lg:flex-row h-full items-center justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8'>
-          {/* text */}
           <motion.div
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
@@ -54,30 +49,29 @@ const Portfolio = () => {
               <b style={{ color: '#0a5647' }}> photoshoots, ad campaigns, brand shoots</b> and more.
               <br />
               <br />
-              Click the <span style={{ color: '#fdde00' }}>yellow</span> button to explore our Photography Content and click the <span style={{ color: '#ff5a78' }}>pink</span> button to delve into our Video Content"
+              Click the <span style={{ color: '#fdde00' }}>yellow</span> button to explore our Photography Content and click the <span style={{ color: '#ff5a78' }}>pink</span> button to delve into our Video Content.
             </p>
             <div className="button-container">
-              <Link to="https://sufna-img.vercel.app/" target='/blank'>
+              <Link to="https://sufna-img.vercel.app/" target='_blank'>
                 <button className="btn-class-name1">
                   <span className="back"></span>
                   <span className="front"></span>
                 </button>
               </Link>
-              <Link to= "https://sufna-vid.vercel.app/" target='/blank'>
+              <Link to="https://sufna-vid.vercel.app/" target='_blank'>
                 <button className="btn-class-name2">
                   <span className="back"></span>
                   <span className="front"></span>
                 </button>
+               
               </Link>
             </div>
           </motion.div>
-          {/* image grid */}
           <div
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
             className='grid grid-cols-2 lg:gap-2'
           >
-            {/* image */}
             <div className='image-container'>
               <img
                 className='portfolio-image'
@@ -108,7 +102,6 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        {/* carousel for mobile view */}
         <div className='carousel-container'>
           <Slider {...settings}>
             <div>

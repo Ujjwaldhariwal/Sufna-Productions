@@ -35,14 +35,14 @@ const Home = () => {
         </video>
         <div className="main">
           <h1 className='middle'>Who Are We?
-            {/* <div className="roller">
+             <div className="roller">
               <span id="rolltext">
                 Artists ?<br />
                 Creators ?<br />
                 Film-Makers ?<br />
                 <span id="spare-time">We Are Sufna Productions</span><br />
               </span>
-            </div> */}
+            </div> 
           </h1>
         </div>
       </div>
