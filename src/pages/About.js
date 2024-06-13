@@ -1,6 +1,4 @@
 import React, { useContext } from 'react';
-// import images
-import WomanImg from '../img/about/woman.png';
 // import link
 import { Link } from 'react-router-dom';
 // import motion
@@ -29,8 +27,8 @@ const About = () => {
         {/* text & img wrapper */}
         <div className='flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left lg:pt-16'>
           {/* image */}
-          <div className='flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden'>
-            <img src={WomanImg} alt='' />
+          <div className='flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden hidden lg:block'>
+            <img src="https://i.ibb.co/0jz3C5c/dhr1.jpg" alt="Woman" />
           </div>
           {/* text */}
           <motion.div
@@ -42,15 +40,15 @@ const About = () => {
           >
             <h1 className='h1'>About Us</h1>
             <p className='mb-12 max-w-sm'>
-              At Sufna Productions, we're not just another media production agency - we're the ,
-              <b> storytellers, the visionaries</b>  and the creative engine that brings your brand's narrative to life.
+              At Sufna Productions, we're not just another media production agency - we're the
+              <b> storytellers, the visionaries</b> and the creative engine that brings your brand's narrative to life.
               <br />
               <br />
               We are passionate about helping modern-day brands make captivating, creative, and high-quality advertisements
               that leave a lasting impression.
             </p>
             <Link to={'/portfolio'} >
-              <button class="btn-abu">
+              <button className="btn-abu">
                 <div> Our Work</div>
                 <svg fill="none" viewBox="0 0 24 24" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="white" d="M11.6801 14.62L14.2401 12.06L11.6801 9.5"></path>

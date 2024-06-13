@@ -3,7 +3,8 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  opacity: 0.8;
+  opacity: 1;
+
 }
 
 .bg-video {
@@ -45,9 +46,10 @@
   font-family: 'Libre Baskerville', serif;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFF00;
+  color: #ffffff;
   font-size: 5rem;
   margin: 0; /* Remove default margin */
+  
 }
 
 h1 {
@@ -70,7 +72,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ADD8E6; /* Changed color to match #spare-time */
+  color: #ffffff; /* Changed color to match #spare-time */
 }
 
 #spare-time {
@@ -79,7 +81,7 @@ h1 {
   font-style: bold;
   letter-spacing: .2rem;
   margin: 0; /* Remove default margin */
-  color: #ADD8E6;
+  color: #ffffff;
   white-space: nowrap;
 }
 
@@ -139,5 +141,31 @@ h1 {
     72.5% {
       top: -6.375rem;
     }
+  }
+}
+.dive-into-sufna-button {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px; /* Adjust this value as needed */
+}
+
+.dive-into-sufna-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .dive-into-sufna-button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }

@@ -1,0 +1,14 @@
+  .woman-img{
+    margin-bottom: 130px;
+    margin-top:60px;
+    width: 500px;
+    height: 500px;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    .woman-img {
+      display: none;
+    }
+  }

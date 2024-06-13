@@ -1,6 +1,4 @@
 import React, { useContext, useState } from 'react';
-// import images
-import WomanImg from '../img/contact/woman.png';
 // import motion
 import { motion } from 'framer-motion';
 // import transition
@@ -8,6 +6,7 @@ import { transition1 } from '../transitions';
 // import context
 import { CursorContext } from '../context/CursorContext';
 import './btn.css';
+import './contact.css'; // Import the new CSS file
 
 const Contact = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -106,7 +105,7 @@ const Contact = () => {
             transition={{ transition: transition1, duration: 1.5 }}
             className='lg:flex-1'
           >
-            <img src={WomanImg} alt='Contact' />
+            <img src="https://i.ibb.co/374Gmng/dhr2.jpg" alt='Contact' className='woman-img' />
           </motion.div>
         </div>
       </div>

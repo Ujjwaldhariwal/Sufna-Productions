@@ -28,31 +28,32 @@ const Header = () => {
           className='hidden xl:flex gap-x-12 font-semibold'
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
-        >
-          <Link
-            to={'/'}
-            className='text-[#000000] hover:text-primary transition'
-          >
-            Home
-          </Link>
-          <Link
-            to={'/about'}
-            className='text-[#000000] hover:text-primary transition'
-          >
-            About
-          </Link>
-          <Link
-            to={'/portfolio'}
-            className='text-[#000000] hover:text-primary transition'
-          >
-            Portfolio
-          </Link>
-          <Link
-            to={'/contact'}
-            className='text-[#000000] hover:text-primary transition'
-          >
-            Contact
-          </Link>
+        ><Link
+        to={'/'}
+        className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
+      >
+        Home
+      </Link>
+      <Link
+        to={'/about'}
+        className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
+      >
+        About
+      </Link>
+      <Link
+        to={'/portfolio'}
+        className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
+      >
+        Portfolio
+      </Link>
+      <Link
+        to={'/contact'}
+        className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
+      >
+        Contact
+      </Link>
+      
+      
         </nav>
       </div>
       {/* socials */}

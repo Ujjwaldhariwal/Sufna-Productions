@@ -1,28 +1,16 @@
 import React, { useContext } from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import link
 import { Link } from 'react-router-dom';
+// import motion
 import { motion } from 'framer-motion';
+// import transition
 import { transition1 } from '../transitions';
+// import cursor context
 import { CursorContext } from '../context/CursorContext';
 import './Portfolio.css';
 
 const Portfolio = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    fade: true,
-    cssEase: 'linear',
-    pauseOnHover: true
-  };
 
   return (
     <motion.section
@@ -63,14 +51,13 @@ const Portfolio = () => {
                   <span className="back"></span>
                   <span className="front"></span>
                 </button>
-               
               </Link>
             </div>
           </motion.div>
           <div
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            className='grid grid-cols-2 lg:gap-2'
+            className='grid grid-cols-2 lg:gap-2 hidden lg:grid'
           >
             <div className='image-container'>
               <img
@@ -85,7 +72,7 @@ const Portfolio = () => {
                 src="https://i.ibb.co/Np6k4qR/2.jpg"
                 alt='2'
               />
-            </div>
+            </div>  
             <div className='image-container'>
               <img
                 className='portfolio-image'
@@ -101,38 +88,6 @@ const Portfolio = () => {
               />
             </div>
           </div>
-        </div>
-        <div className='carousel-container'>
-          <Slider {...settings}>
-            <div>
-              <img
-                className='portfolio-image'
-                src="https://i.ibb.co/SfSyf9K/1.jpg"
-                alt='1'
-              />
-            </div>
-            <div>
-              <img
-                className='portfolio-image'
-                src="https://i.ibb.co/Np6k4qR/2.jpg"
-                alt='2'
-              />
-            </div>
-            <div>
-              <img
-                className='portfolio-image'
-                src="https://i.ibb.co/LCn1kns/3.jpg"
-                alt='3'
-              />
-            </div>
-            <div>
-              <img
-                className='portfolio-image'
-                src="https://i.ibb.co/LCC29HP/4.jpg"
-                alt='4'
-              />
-            </div>
-          </Slider>
         </div>
       </div>
     </motion.section>
