@@ -1,12 +1,13 @@
+// Contact.js
+
 import React, { useContext, useState } from 'react';
-// import motion
 import { motion } from 'framer-motion';
-// import transition
 import { transition1 } from '../transitions';
-// import context
 import { CursorContext } from '../context/CursorContext';
 import './btn.css';
 import './contact.css'; // Import the new CSS file
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+
 
 const Contact = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -43,8 +44,9 @@ const Contact = () => {
       transition={transition1}
       className='section bg-white'
     >
+      
       <div className='container mx-auto h-full'>
-        <div className='flex flex-col lg:flex-row h-full items-center justify-start pt-36 gap-x-8 text-center lg:text-left'>
+        <div className='flex flex-col lg:flex-row h-full items-center justify-start pt-32 gap-x-8 text-center lg:text-left'>
           {/* bg */}
           <motion.div
             initial={{ opacity: 0, y: '100%' }}
@@ -59,10 +61,12 @@ const Contact = () => {
             onMouseLeave={mouseLeaveHandler}
             className='lg:flex-1 lg:pt-32 px-4'
           >
+            
             <h1 className='h1'>Contact Us</h1>
             {result === "Form Submitted Successfully" ? (
               <div className='flex flex-col gap-y-4 lg:items-center lg:justify-center'>
                 <p className='text-lg font-semibold text-primary'>Form Submitted Successfully</p>
+
               </div>
             ) : (
               <form className='flex flex-col gap-y-4' onSubmit={onSubmit}>
@@ -93,6 +97,13 @@ const Contact = () => {
                 </button>
               </form>
             )}
+            
+
+            <div className='flex justify-center lg:hidden gap-x-4 mt-4'>
+              <FaFacebookF className='social-icon1' />
+              <FaInstagram className='social-icon2' />
+              <FaYoutube className='social-icon3' />
+            </div>
             <span>{result !== "Form Submitted Successfully" && result}</span>
           </div>
           {/* image */}

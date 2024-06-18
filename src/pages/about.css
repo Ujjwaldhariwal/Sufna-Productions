@@ -3,7 +3,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh; /* Full viewport height */
+      /* height: 100vh; Full viewport height */
       padding-top: 0; /* Remove top padding if any */
     }
   
@@ -16,7 +16,7 @@
       height: 100%;
     }
   
-    
+  
   
     .h1 {
       margin-top: 0;

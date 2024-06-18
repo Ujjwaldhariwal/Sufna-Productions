@@ -17,9 +17,11 @@
     justify-content: center;
     height: 100vh; /* Full viewport height */
     padding-top: 0; /* Remove top padding if any */
+    
   }
 
   .container {
+    margin-top: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;

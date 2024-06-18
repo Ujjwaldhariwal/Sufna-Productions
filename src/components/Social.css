@@ -1,3 +1,11 @@
+/* Social.css */
+
+
+.xl\\:flex {
+  display: flex;
+}
+
+/* Add styles for the social icons */
 .icon-facebook, .icon-instagram, .icon-youtube {
   width: 24px;
   height: 24px;
@@ -6,4 +14,23 @@
 .icon-facebook svg, .icon-instagram svg, .icon-youtube svg {
   width: 100%;
   height: 100%;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+  .social-icons-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white; /* Adjust background color as needed */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-icons-mobile ul {
+    display: flex;
+    gap: 20px;
+  }
 }

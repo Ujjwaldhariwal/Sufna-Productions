@@ -37,7 +37,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '-80%' }}
             transition={transition1}
-            className='flex-1 pt-36 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start'
+            className='flex-1 pt-20 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col  items-center lg:items-start connect-section'
           >
             <h1 className='h1'>About Us</h1>
             <p className='mb-12 max-w-sm'>

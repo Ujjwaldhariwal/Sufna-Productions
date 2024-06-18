@@ -31,6 +31,7 @@ const Portfolio = () => {
             transition={transition1}
             className='flex flex-col lg:items-start'
           >
+            
             <h1 className='h1'>Portfolio</h1>
             <p className='mb-12 max-w-sm'>
               Our portfolio showcases a diverse range of work including
