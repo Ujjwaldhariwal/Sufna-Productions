@@ -31,6 +31,7 @@ const Header = () => {
         ><Link
         to={'/'}
         className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
+        
       >
         Home
       </Link>

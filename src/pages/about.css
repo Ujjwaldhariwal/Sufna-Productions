@@ -1,0 +1,28 @@
+/* Add this to About component CSS file */
+@media (max-width: 768px) {
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Full viewport height */
+      padding-top: 0; /* Remove top padding if any */
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+    }
+  
+    .flex {
+      height: 100%;
+    }
+  
+    .h1 {
+      margin-top: 0;
+    }
+  }
+  

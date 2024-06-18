@@ -8,6 +8,7 @@ import { transition1 } from '../transitions';
 // import cursor context
 import { CursorContext } from '../context/CursorContext';
 import './btn.css';
+import './about.css';
 
 const About = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
