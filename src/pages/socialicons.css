@@ -1,0 +1,77 @@
+.ssIcons * {
+    box-sizing: border-box;
+}
+.ssIcons {
+    perspective: 400px;
+    margin: auto;
+    width: 220px;
+    display: flex;
+    justify-content: space-around;
+}
+.ssIcon {
+    position: relative;
+    padding: 0;
+    font-size: 30px;
+    box-shadow: inset 0px 0px 1.3px 2.5px rgba(200, 200, 200, .3), inset 0px 0px 2.3px 5.5px rgba(200, 200, 200, .3);
+    height: 50px;
+    border-radius: 13px;
+    flex-basis: 50px;
+}
+.ssIcon i[class="fa fa-facebook"] {
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 15px;
+    transform: translate(95%, 60%);
+}
+.ssIcon i[class="fa fa-twitter"] {
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translate(25%, 17%);
+}
+.ssIcon i[class="fa fa-codepen"] {
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 15px;
+    transform: translate(33%, 60%);
+}
+.ssIcon i[class="fa fa-github"] {
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 15px;
+    transform: translate(46%, 60%);
+}
+.ssIcon.tw {
+    background-color: lightblue;
+    text-shadow: 1px 1px black;
+}
+.ssIcon.fb {
+    background-color: darkblue;
+}
+.ssIcon.cp {
+    background-color: black;
+}
+.ssIcon.gh {
+    background-color: black;
+}
+.ssIcon:hover {
+    animation: flipin 1s 1 forwards;
+}
+@keyframes flipin {
+    0% {
+        transform: perspective(500px) rotate3d(1, 0, 0, 180deg);
+   }
+    100% {
+        transform: perspective(500px) rotate3d(1, 0, 0, 0deg);
+   }
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

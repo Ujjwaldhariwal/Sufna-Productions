@@ -48,3 +48,23 @@
     font-size: 40px;
     color: #ff0000; /* YouTube color */
   }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+    margin-top: 20px; /* Space from the heading */
+  }
+  
+  
+  
+  
+  
+  /* Add any additional styling needed for responsive design */
+  @media (max-width: 768px) {
+    .button-wrapper {
+      flex-direction: column;
+      gap: 10px; /* Reduced space between the buttons */
+    }
+  }
+  

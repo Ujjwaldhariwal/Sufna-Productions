@@ -31,29 +31,31 @@ const Portfolio = () => {
             transition={transition1}
             className='flex flex-col lg:items-start'
           >
-            
+
             <h1 className='h1'>Portfolio</h1>
             <p className='mb-12 max-w-sm'>
               Our portfolio showcases a diverse range of work including
               <b style={{ color: '#0a5647' }}> photoshoots, ad campaigns, brand shoots</b> and more.
               <br />
               <br />
-              Click the <span style={{ color: '#fdde00' }}>yellow</span> button to explore our Photography Content and click the <span style={{ color: '#ff5a78' }}>pink</span> button to delve into our Video Content.
             </p>
-            <div className="button-container">
+            <div className="portfolio-button-container">
               <Link to="https://sufna-img.vercel.app/" target='_blank'>
-                <button className="btn-class-name1">
-                  <span className="back"></span>
-                  <span className="front"></span>
+                <button className="portfolio-button photos">
+                  <span class="shadow"></span>
+                  <span class="edge"></span>
+                  <span class="front text">Photos</span>
                 </button>
               </Link>
               <Link to="https://sufna-vid.vercel.app/" target='_blank'>
-                <button className="btn-class-name2">
-                  <span className="back"></span>
-                  <span className="front"></span>
+                <button className="portfolio-button videos">
+                  <span class="shadow"></span>
+                  <span class="edge"></span>
+                  <span class="front text">Videos</span>
                 </button>
               </Link>
             </div>
+
           </motion.div>
           <div
             onMouseEnter={mouseEnterHandler}
@@ -73,7 +75,7 @@ const Portfolio = () => {
                 src="https://i.ibb.co/Np6k4qR/2.jpg"
                 alt='2'
               />
-            </div>  
+            </div>
             <div className='image-container'>
               <img
                 className='portfolio-image'

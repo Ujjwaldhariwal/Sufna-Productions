@@ -1,39 +1,21 @@
-// Contact.js
-
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
 import { CursorContext } from '../context/CursorContext';
 import './btn.css';
 import './contact.css'; // Import the new CSS file
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
-
+import dhruv from '../img/contact/dhr2.png'; // Import the new image
 
 const Contact = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
-  const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+  const handleEmailClick = () => {
+    window.location.href = "mailto:business@sufnaproductions.com";
+  };
 
-    formData.append("access_key", "3b6dd913-8563-4ba2-8161-cc8909ce39f6");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
-    }
+  const handleWhatsAppClick = () => {
+    window.location.href = "https://wa.me/919779426400";
   };
 
   return (
@@ -44,7 +26,6 @@ const Contact = () => {
       transition={transition1}
       className='section bg-white'
     >
-
       <div className='container mx-auto h-full'>
         <div className='flex flex-col lg:flex-row h-full items-center justify-start pt-32 gap-x-8 text-center lg:text-left'>
           {/* bg */}
@@ -61,43 +42,15 @@ const Contact = () => {
             onMouseLeave={mouseLeaveHandler}
             className='lg:flex-1 lg:pt-32 px-4'
           >
-
             <h1 className='h1'>Contact Us</h1>
-            {result === "Form Submitted Successfully" ? (
-              <div className='flex flex-col gap-y-4 lg:items-center lg:justify-center'>
-                <p className='text-lg font-semibold text-primary'>Form Submitted Successfully</p>
-
-              </div>
-            ) : (
-              <form className='flex flex-col gap-y-4' onSubmit={onSubmit}>
-                <div className='flex gap-x-10'>
-                  <input
-                    className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
-                    type='text'
-                    name='name'
-                    placeholder='Your name'
-                    required
-                  />
-                  <input
-                    className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
-                    type='email'
-                    name='email'
-                    placeholder='Your email address'
-                    required
-                  />
-                </div>
-                <textarea
-                  className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879] resize-none'
-                  name='message'
-                  placeholder='Your message'
-                  required
-                ></textarea>
-                <button className='button-sub' type='submit'>
-                  Send it
-                </button>
-              </form>
-            )}
-
+            <div className='button-wrapper'>
+              <button className='button-sub' onClick={handleEmailClick}>
+                Email
+              </button>
+              <button className='button-sub' onClick={handleWhatsAppClick}>
+                WhatsApp
+              </button>
+            </div>
 
             <div className='flex justify-center lg:hidden gap-x-4 mt-4'>
               <a href="https://www.facebook.com/people/Sufna-Productions/61550937880697/?mibextid=LQQJ4d">
@@ -110,7 +63,6 @@ const Contact = () => {
                 <FaYoutube className='social-icon3' />
               </a>
             </div>
-            <span>{result !== "Form Submitted Successfully" && result}</span>
           </div>
           {/* image */}
           <motion.div
@@ -122,7 +74,7 @@ const Contact = () => {
             transition={{ transition: transition1, duration: 1.5 }}
             className='lg:flex-1'
           >
-            <img src="https://i.ibb.co/374Gmng/dhr2.jpg" alt='Contact' className='woman-img' />
+            <img src={dhruv} alt='Contact' className='woman-img' />
           </motion.div>
         </div>
       </div>

@@ -2,6 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import bgVideom from '../img/header/bg-videom.mp4'; // Importing the video
 import './Home.css';
 import { Link } from 'react-router-dom';
+import About from '../pages/About';
+import Portfolio from '../pages/Portfolio';
+import Contact from '../pages/Contact';
+import Clients from '../pages/Our_Clients';
 
 
 const Home = () => {
@@ -58,16 +62,19 @@ const Home = () => {
       >
        <button className="dive-into-sufna-button">Dive into Sufna</button>
       </Link>
-            
-            
-            
-        
-
-
-
           </h1>
         </div>
       </div>
+      <br></br>
+      <About />
+      <Clients />
+      
+      
+      <Portfolio />
+      <Contact />
+
+      
+      
     </>
   );
 };

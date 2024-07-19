@@ -56,6 +56,9 @@ const MobileNav = () => {
           <li>
             <Link to='/contact' onClick={handleMenuClose}>Contact</Link>
           </li>
+          <li>
+            <Link to='/clients' onClick={handleMenuClose}>Our Clients</Link>
+          </li>
         </ul>
       </motion.div>
     </nav>
