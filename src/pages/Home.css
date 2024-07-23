@@ -72,15 +72,7 @@ h1 {
   color: #ffffff; /* Changed color to match #spare-time */
 }
 
-#spare-time {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-style: bold;
-  letter-spacing: .2rem;
-  margin: 0; /* Remove default margin */
-  color: #ffffff;
-  white-space: nowrap;
-}
+
 
 .roller #rolltext {
   position: absolute;

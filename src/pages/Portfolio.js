@@ -8,6 +8,7 @@ import { transition1 } from '../transitions';
 // import cursor context
 import { CursorContext } from '../context/CursorContext';
 import './Portfolio.css';
+import './btn.css';
 
 const Portfolio = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -41,17 +42,14 @@ const Portfolio = () => {
             </p>
             <div className="portfolio-button-container">
               <Link to="https://sufna-img.vercel.app/" target='_blank'>
-                <button className="portfolio-button photos">
-                  <span class="shadow"></span>
-                  <span class="edge"></span>
-                  <span class="front text">Photos</span>
+                <button className="btn-abu">
+                 <div>Photos</div>
                 </button>
               </Link>
+              <br></br>
               <Link to="https://sufna-vid.vercel.app/" target='_blank'>
-                <button className="portfolio-button videos">
-                  <span class="shadow"></span>
-                  <span class="edge"></span>
-                  <span class="front text">Videos</span>
+              <button className="btn-abu">
+                 <div>Videos</div>
                 </button>
               </Link>
             </div>

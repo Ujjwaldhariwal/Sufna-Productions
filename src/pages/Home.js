@@ -52,16 +52,11 @@ const Home = () => {
                 Artists ?<br />
                 Creators ?<br />
                 Film-Makers ?<br />
-                <span id="spare-time">We Are Sufna Productions</span><br />
               </span>
               
 
             </div>
-            <Link
-        to={'/about'}
-      >
-       <button className="dive-into-sufna-button">Dive into Sufna</button>
-      </Link>
+            
           </h1>
         </div>
       </div>

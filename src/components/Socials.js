@@ -25,6 +25,11 @@ const Socials = () => {
         </li>
         <li>
           <SocialIcon url="https://www.youtube.com/@Sufna.Productions" className="icon-youtube" style={iconStyle} target="_blank" />
+
+        </li>
+        <li>
+          <SocialIcon url="https://www.linkedin.com/company/sufnaproductions/" className="icon-linkedin" style={iconStyle} target="_blank" />
+          
         </li>
       </ul>
     </div>

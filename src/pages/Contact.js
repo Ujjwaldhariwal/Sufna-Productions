@@ -44,14 +44,13 @@ const Contact = () => {
           >
             <h1 className='h1'>Contact Us</h1>
             <div className='button-wrapper'>
-              <button className='button-sub' onClick={handleEmailClick}>
-                Email
+              <button className="btn-abu" onClick={handleEmailClick}>
+                <div> E-mail </div>
               </button>
-              <button className='button-sub' onClick={handleWhatsAppClick}>
-                WhatsApp
+              <button className='btn-abu' onClick={handleWhatsAppClick}>
+                <div>Whatsapp</div>
               </button>
             </div>
-
             <div className='flex justify-center lg:hidden gap-x-4 mt-4'>
               <a href="https://www.facebook.com/people/Sufna-Productions/61550937880697/?mibextid=LQQJ4d">
                 <FaFacebookF className='social-icon1' />

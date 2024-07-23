@@ -1,19 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react';
-// import components
 import Socials from './Socials';
 import Logo from '../img/header/logo.svg';
 import MobileNav from './MobileNav';
-// import link
 import { Link } from 'react-router-dom';
-// import cursor context
 import { CursorContext } from '../context/CursorContext';
+import { debounce } from 'lodash'; // You need to install lodash for this
 
 const Header = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
 
-  const handleScroll = () => {
+  const handleScroll = debounce(() => {
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY) {
       // Scrolling down
@@ -23,7 +21,7 @@ const Header = () => {
       setShowHeader(true);
     }
     setLastScrollY(currentScrollY);
-  };
+  }, 10); // Adjust the debounce delay if needed
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -48,44 +46,6 @@ const Header = () => {
         >
           <img src={Logo} alt='' className='w-full h-auto' />
         </Link>
-        {/* nav - initially hidden - show on desktop mode */}
-        <nav
-          className='hidden xl:flex gap-x-12 font-semibold'
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaveHandler}
-        >
-          <Link
-            to={'/'}
-            className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
-          >
-            Home
-          </Link>
-          <Link
-            to={'/about'}
-            className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
-          >
-            About
-          </Link>
-          <Link
-            to={'/clients'}
-            className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
-          >
-            Our Clients
-          </Link>
-          <Link
-            to={'/portfolio'}
-            className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
-          >
-            Portfolio
-          </Link>
-          <Link
-            to={'/contact'}
-            className='text-[#000000] hover:text-[#FFD700] hover:font-bold transition'
-          >
-            Contact
-          </Link>
-          
-        </nav>
       </div>
       {/* socials */}
       <Socials />
