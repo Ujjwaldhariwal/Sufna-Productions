@@ -51,14 +51,15 @@ const MobileNav = () => {
             <Link to='/about' onClick={handleMenuClose}>About</Link>
           </li>
           <li>
+            <Link to='/clients' onClick={handleMenuClose}>Our Clients</Link>
+          </li>
+          <li>
             <Link to='/portfolio' onClick={handleMenuClose}>Portfolio</Link>
           </li>
           <li>
             <Link to='/contact' onClick={handleMenuClose}>Contact</Link>
           </li>
-          <li>
-            <Link to='/clients' onClick={handleMenuClose}>Our Clients</Link>
-          </li>
+          
         </ul>
       </motion.div>
     </nav>
