@@ -7,6 +7,7 @@ import Contact from '../pages/Contact';
 // import the Clients component
 import Clients from '../pages/Our_Clients';
 
+
 // import routes route & useLocation hook
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -32,6 +33,7 @@ const AnimRoutes = () => {
         <Route path='/contact' element={<Contact />} />
         {/* Add the route for the Clients component */}
         <Route path='/clients' element={<Clients />} />
+        
       </Routes>
     </AnimatePresence>
   );

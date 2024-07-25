@@ -4,7 +4,7 @@ import { transition1 } from '../transitions';
 import { CursorContext } from '../context/CursorContext';
 import './btn.css';
 import './contact.css'; // Import the new CSS file
-import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import dhruv from '../img/contact/dhr2.png'; // Import the new image
 
 const Contact = () => {
@@ -60,6 +60,9 @@ const Contact = () => {
               </a>
               <a href="https://www.youtube.com/@Sufna.Productions">
                 <FaYoutube className='social-icon3' />
+              </a>
+              <a href="https://www.linkedin.com/company/sufnaproductions/">
+                <FaLinkedin className='social-icon4' />
               </a>
             </div>
           </div>

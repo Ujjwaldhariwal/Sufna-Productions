@@ -6,6 +6,7 @@ import About from '../pages/About';
 import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
 import Clients from '../pages/Our_Clients';
+import Footer from '../pages/footer';
 
 
 const Home = () => {
@@ -67,6 +68,7 @@ const Home = () => {
       
       <Portfolio />
       <Contact />
+      <Footer />
 
       
       
