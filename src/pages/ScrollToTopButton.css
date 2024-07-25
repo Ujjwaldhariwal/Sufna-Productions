@@ -1,0 +1,79 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 2%; /* Adjust based on the viewport height */
+    right: 2%; /* Adjust based on the viewport width */
+    width: 50px; /* Default size */
+    height: 50px; /* Default size */
+    background-color: #ff6f61; /* Background color */
+    color: white; /* Icon color */
+    border: none;
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for aesthetics */
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* Ensure it’s on top */
+  }
+  
+  .scroll-to-top:before {
+    content: "";
+    position: absolute;
+    width: 60px; /* Flower size */
+    height: 60px; /* Flower size */
+    background-color: #ff6f61;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+  
+  /* Hover and focus states */
+  .scroll-to-top:hover {
+    background-color: #ff8a80; /* Hover background color */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .scroll-to-top:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* For devices larger than 1200px (e.g., large TVs) */
+  @media (min-width: 1200px) {
+    .scroll-to-top {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  
+  /* For tablets and small laptops (e.g., screen widths between 768px and 1199px) */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .scroll-to-top {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  /* For mobile devices (e.g., screen widths less than 768px) */
+  @media (max-width: 767px) {
+    .scroll-to-top {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  /* For very small mobile devices (e.g., screen widths less than 480px) */
+  @media (max-width: 479px) {
+    .scroll-to-top {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .scroll-to-top:before {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  

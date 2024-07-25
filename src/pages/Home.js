@@ -7,7 +7,7 @@ import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
 import Clients from '../pages/Our_Clients';
 import Footer from '../pages/footer';
-
+import ScrollToTopButton from './ScrollToTopButton'; // Import the button
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -55,7 +55,6 @@ const Home = () => {
                 Film-Makers ?<br />
               </span>
             </div>
-            
           </h1>
         </div>
       </div>
@@ -65,9 +64,7 @@ const Home = () => {
       <Portfolio />
       <Contact />
       <Footer />
-
-      
-      
+      <ScrollToTopButton /> {/* Add the button here */}
     </>
   );
 };
