@@ -54,8 +54,6 @@ const Home = () => {
                 Creators ?<br />
                 Film-Makers ?<br />
               </span>
-              
-
             </div>
             
           </h1>
@@ -64,8 +62,6 @@ const Home = () => {
       <br></br>
       <About />
       <Clients />
-      
-      
       <Portfolio />
       <Contact />
       <Footer />

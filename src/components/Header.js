@@ -4,7 +4,7 @@ import Logo from '../img/header/logo.svg';
 import MobileNav from './MobileNav';
 import { Link } from 'react-router-dom';
 import { CursorContext } from '../context/CursorContext';
-import { debounce } from 'lodash'; // You need to install lodash for this
+import { debounce } from 'lodash'; // Ensure lodash is installed
 
 const Header = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -28,11 +28,11 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY]);
+  }, []); // No need to include lastScrollY
 
   return (
     <header
-      className={`fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center transition-transform duration-300 ${
         showHeader ? 'transform translate-y-0' : 'transform -translate-y-full'
       }`}
     >
@@ -42,9 +42,9 @@ const Header = () => {
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
           to={'/'}
-          className='max-w-[250px]' // Increased max width
+          className='max-w-[250px]' // Adjusted max width
         >
-          <img src={Logo} alt='' className='w-full h-auto' />
+          <img src={Logo} alt='Logo' className='w-full h-auto' />
         </Link>
       </div>
       {/* socials */}
