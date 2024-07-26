@@ -105,6 +105,7 @@
   font-size: 40px;
   color: #ff0000;
 }
+
 .social-icon4 {
   font-size: 40px;
   color: #0077B5;
@@ -176,5 +177,101 @@
   .button-wrapper {
     gap: 40px;
     margin-top: 40px;
+  }
+}
+
+/* Ultra-wide screens (1920px and above) */
+@media (min-width: 1920px) {
+  .woman-img {
+    margin-bottom: 60px;
+    margin-top: 120px;
+    width: 1000px;
+    height: 1000px;
+  }
+  .section {
+    padding-top: 50px;
+  }
+  .container {
+    justify-content: space-evenly;
+  }
+  .h1 {
+    margin-top: 50px;
+    font-size: 3em;
+  }
+  .button-wrapper {
+    gap: 50px;
+    margin-top: 50px;
+  }
+}
+
+/* 4K screens */
+@media (min-width: 2560px) {
+  .woman-img {
+    margin-bottom: 40px;
+    margin-top: 140px;
+    width: 1200px;
+    height: 1200px;
+  }
+  .section {
+    padding-top: 60px;
+  }
+  .container {
+    justify-content: space-evenly;
+  }
+  .h1 {
+    margin-top: 60px;
+    font-size: 3.5em;
+  }
+  .button-wrapper {
+    gap: 60px;
+    margin-top: 60px;
+  }
+}
+
+/* 5K screens */
+@media (min-width: 3200px) {
+  .woman-img {
+    margin-bottom: 20px;
+    margin-top: 160px;
+    width: 1400px;
+    height: 1400px;
+  }
+  .section {
+    padding-top: 70px;
+  }
+  .container {
+    justify-content: space-evenly;
+  }
+  .h1 {
+    margin-top: 70px;
+    font-size: 4em;
+  }
+  .button-wrapper {
+    gap: 70px;
+    margin-top: 70px;
+  }
+}
+
+/* 8K screens */
+@media (min-width: 3840px) {
+  .woman-img {
+    margin-bottom: 10px;
+    margin-top: 180px;
+    width: 1600px;
+    height: 1600px;
+  }
+  .section {
+    padding-top: 80px;
+  }
+  .container {
+    justify-content: space-evenly;
+  }
+  .h1 {
+    margin-top: 80px;
+    font-size: 4.5em;
+  }
+  .button-wrapper {
+    gap: 80px;
+    margin-top: 80px;
   }
 }

@@ -1,10 +1,10 @@
+/* Mobile and small tablets */
 @media (max-width: 768px) {
   .section {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 100vh; Full viewport height */
-    padding-top: 0; /* Remove top padding if any */
+    padding-top: 0;
   }
 
   .container {
@@ -21,41 +21,136 @@
   }
 }
 
-/* Large screen adjustments */
-@media (min-width: 1024px) {
+/* Medium screens (large tablets, small laptops) */
+@media (min-width: 769px) and (max-width: 1023px) {
   .section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20px; /* Add padding as needed for larger screens */
+    padding-top: 10px;
   }
 
   .container {
     display: flex;
-    flex-direction: row; /* Change to row for larger screens */
-    justify-content: space-around;
-    align-items: flex-start;
-    text-align: left; /* Align text to the left */
-    height: auto; /* Adjust height */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
   }
 
   .h1 {
-    margin-top: 20px; /* Add margin as needed */
+    margin-top: 10px;
   }
 }
 
-/* Extra large screen adjustments (TVs, very large monitors) */
-@media (min-width: 1440px) {
+/* Large screens (desktops, larger laptops) */
+@media (min-width: 1024px) and (max-width: 1439px) {
   .section {
-    padding-top: 30px; /* Add more padding as needed for extra large screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
   }
 
   .container {
-    justify-content: space-between; /* Increase space between elements */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+    height: auto;
   }
 
   .h1 {
-    margin-top: 30px; /* Add more margin as needed */
-    font-size: 2em; /* Increase font size for better visibility */
+    margin-top: 20px;
+  }
+}
+
+/* Extra large screens (large desktops, TVs) */
+@media (min-width: 1440px) {
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    height: auto;
+  }
+
+  .h1 {
+    margin-top: 30px;
+    font-size: 2em;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .section {
+    padding-top: 40px;
+  }
+
+  .container {
+    justify-content: space-evenly;
+  }
+
+  .h1 {
+    margin-top: 40px;
+    font-size: 2.5em;
+  }
+}
+
+/* 4K screens */
+@media (min-width: 2560px) {
+  .section {
+    padding-top: 50px;
+  }
+
+  .container {
+    justify-content: space-around;
+  }
+
+  .h1 {
+    margin-top: 50px;
+    font-size: 3em;
+  }
+}
+
+/* 5K screens */
+@media (min-width: 3200px) {
+  .section {
+    padding-top: 60px;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+
+  .h1 {
+    margin-top: 60px;
+    font-size: 3.5em;
+  }
+}
+
+/* 8K screens */
+@media (min-width: 7680px) {
+  .section {
+    padding-top: 70px;
+  }
+
+  .container {
+    justify-content: space-evenly;
+  }
+
+  .h1 {
+    margin-top: 70px;
+    font-size: 4em;
   }
 }
