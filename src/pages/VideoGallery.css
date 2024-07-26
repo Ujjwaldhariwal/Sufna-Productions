@@ -1,53 +1,8 @@
-/* VideoGallery.css */
 .video-gallery {
   position: relative;
   overflow: hidden;
   font-family: 'Arial', sans-serif;
   transition: background-color 0.3s, color 0.3s;
-}
-
-/* Theme Toggle Button */
-.theme-toggle-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  transition: transform 0.3s;
-}
-
-.sun-moon-icon {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 0px 10px rgb(255, 251, 35);
-  position: relative;
-}
-
-.sun-moon-icon::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #efef11;
-  transform: translate(-50%, -50%);
-  transition: background 0.3s;
-}
-
-.dark-mode .sun-moon-icon {
-  background: #424242;
-  box-shadow: 0px 0px 35px rgb(255, 255, 255); /* Neon green shadow for dark mode */
-}
-
-.dark-mode .sun-moon-icon::before {
-  background: #ffffff;
 }
 
 /* Parallax Background */
@@ -65,7 +20,6 @@
 .parallax-content h1 {
   margin-top: 50px;
   font-size: 3rem;
-  /* margin-bottom: 30px; */
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -100,7 +54,7 @@
   margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Standard shadow for light mode */
+  box-shadow: 0 -9px 20px rgba(177, 231, 249, 0.881), 0 4px 15px rgb(122, 253, 181); /* Brighter pastel gradient box shadow */
 }
 
 /* Responsive Design */
@@ -134,21 +88,4 @@
   .brand-section h2 {
     font-size: 1.5rem;
   }
-}
-
-/* Dark Mode Styles */
-.dark-mode .parallax-content {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.dark-mode .video-item {
-  box-shadow: 0 0px 20px #53de91; /* Bright white shadow for dark mode */
-}
-/* .video-item{
-  box-shadow: 0 0px 35px #53de929d; 
-} */
-
-.dark-mode .parallax-content h1,
-.dark-mode .brand-section h2 {
-  color: #fff; /* Bright white text for headings in dark mode */
 }

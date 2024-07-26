@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Masonry from 'react-masonry-css';
 import YouTube from 'react-youtube';
 import { Parallax } from 'react-parallax';
@@ -8,7 +8,7 @@ const brands = [
   {
     name: 'Yakuza Electrics',
     videos: [
-      'RAwDOZ4pz0k', // Video ID from URL
+      'RAwDOZ4pz0k',
       '7vlq7fNQDWs',
       'A2djq0t_hA0',
       'eIjhsjpj7V4',
@@ -17,30 +17,30 @@ const brands = [
   },
   {
     name: 'EduCaptain',
-    videos: [ 
-        'OLMIZ_IPijs', 
-        '2Vju98MO_t8',
-        '9_Sqf9UTXs8',
-        'UutkEhRi7SU'
-      ] 
+    videos: [
+      'OLMIZ_IPijs',
+      '2Vju98MO_t8',
+      '9_Sqf9UTXs8',
+      'UutkEhRi7SU'
+    ]
   },
   {
     name: 'Short Films',
     videos: [
-        'Vp2Wc1A7ao4',
-        'suSKmHIK5NI',
-        'Yzm2wJkTfs8'
-      ] 
+      'Vp2Wc1A7ao4',
+      'suSKmHIK5NI',
+      'Yzm2wJkTfs8'
+    ]
   },
   {
     name: 'Behind the Shoot',
     videos: [
-        'qS7K6iy2REA',
-        'FfHMyCJ2nPY',
-        'dQ7RwZ5ZKy4', 
-        'HjqUiaZw4Qg',
-        '52-LRaICdo8'
-      ] 
+      'qS7K6iy2REA',
+      'FfHMyCJ2nPY',
+      'dQ7RwZ5ZKy4',
+      'HjqUiaZw4Qg',
+      '52-LRaICdo8'
+    ]
   },
 ];
 
@@ -51,18 +51,8 @@ const breakpoints = {
 };
 
 const VideoGallery = () => {
-  const [theme, setTheme] = useState('light');
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-    document.body.classList.toggle('dark-mode');
-  };
-
   return (
-    <div className={`video-gallery ${theme}`}>
-      <button className="theme-toggle-btn" onClick={toggleTheme}>
-        <span className={`sun-moon-icon ${theme}`}></span>
-      </button>
+    <div className="video-gallery">
       <Parallax
         blur={{ min: -5, max: 15 }}
         bgImage="https://source.unsplash.com/random/1920x1080"
