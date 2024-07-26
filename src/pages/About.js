@@ -29,7 +29,7 @@ const About = () => {
         <div className='flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left lg:pt-16'>
           {/* image */}
           <div className='flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden hidden lg:block'>
-            <img src="https://i.ibb.co/0jz3C5c/dhr1.jpg" alt="Woman" />
+            <img src="https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/dhr1%20(1).jpg?updatedAt=1721991344486" alt="About Us" />
           </div>
           {/* text */}
           <motion.div

@@ -1,28 +1,18 @@
 import React from 'react';
 import './Clients.css';
-import img1 from '../img/Logo/1.png';
-import img2 from '../img/Logo/2.png';
-import img3 from '../img/Logo/3.png';
-import img4 from '../img/Logo/4.png';
-import img5 from '../img/Logo/5.png';
-import img6 from '../img/Logo/6.png';
-import img7 from '../img/Logo/7.png';
-import img8 from '../img/Logo/8.png';
-import img9 from '../img/Logo/9.png';
-import img10 from '../img/Logo/10.png';
 
 const Clients = () => {
   const clients = [
-    { img: img1 },
-    { img: img2 },
-    { img: img3 },
-    { img: img4 },
-    { img: img5 },
-    { img: img6 },
-    { img: img7 },
-    { img: img8 },
-    { img: img9 },
-    { img: img10 },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/1.png?updatedAt=1721990377471' },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/2.png?updatedAt=1721990905385' },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/3.png?updatedAt=1721990377714' },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/4.png?updatedAt=1721990377578' },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/5.png?updatedAt=1721990377554' },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/6.png?updatedAt=1721990377826' },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/7.png?updatedAt=1721990377711' },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/8.png?updatedAt=1721990377475' },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/9.png?updatedAt=1721990377540' },
+    { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/10.png?updatedAt=1721990905280' },
   ];
 
   return (

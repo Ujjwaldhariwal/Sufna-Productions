@@ -5,7 +5,6 @@ import { CursorContext } from '../context/CursorContext';
 import './btn.css';
 import './contact.css'; // Import the new CSS file
 import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
-import dhruv from '../img/contact/dhr2.png'; // Import the new image
 
 const Contact = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -76,7 +75,7 @@ const Contact = () => {
             transition={{ transition: transition1, duration: 1.5 }}
             className='lg:flex-1'
           >
-            <img src={dhruv} alt='Contact' className='woman-img' />
+            <img src='https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/dhr2.png?updatedAt=1721991035408' alt='Contact' className='woman-img' />
           </motion.div>
         </div>
       </div>

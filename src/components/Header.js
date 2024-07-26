@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Socials from './Socials';
-import Logo from '../img/header/logo.svg';
 import MobileNav from './MobileNav';
 import { Link } from 'react-router-dom';
 import { CursorContext } from '../context/CursorContext';
@@ -44,7 +43,7 @@ const Header = () => {
           to={'/'}
           className='max-w-[250px]' // Adjusted max width
         >
-          <img src={Logo} alt='Logo' className='w-full h-auto' />
+          <img src='https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logo.svg?updatedAt=1721991050415' alt='Logo' className='w-full h-auto' />
         </Link>
       </div>
       {/* socials */}

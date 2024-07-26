@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import bgVideom from '../img/header/bg-videom.mp4'; // Importing the video
-import './Home.css';
 import { Link } from 'react-router-dom';
 import About from '../pages/About';
 import Portfolio from '../pages/Portfolio';
@@ -8,6 +6,7 @@ import Contact from '../pages/Contact';
 import Clients from '../pages/Our_Clients';
 import Footer from '../pages/footer';
 import ScrollToTopButton from './ScrollToTopButton'; // Import the button
+import './Home.css';
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -45,7 +44,7 @@ const Home = () => {
           className="bg-video"
           ref={videoRef}
         >
-          <source src={bgVideom} type="video/mp4" />
+          <source src="https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/bg-videom.mp4?updatedAt=1721991051137" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="main">
@@ -73,4 +72,3 @@ const Home = () => {
 };
 
 export default Home;
- 

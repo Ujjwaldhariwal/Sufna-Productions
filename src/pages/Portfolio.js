@@ -57,28 +57,28 @@ const Portfolio = () => {
             <div className='image-container'>
               <img
                 className='portfolio-image'
-                src="https://i.ibb.co/SfSyf9K/1.jpg"
+                src="https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/p1.jpg?updatedAt=1721991594640"
                 alt='1'
               />
             </div>
             <div className='image-container'>
               <img
                 className='portfolio-image'
-                src="https://i.ibb.co/Np6k4qR/2.jpg"
+                src="https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/p2.jpg?updatedAt=1721991594800"
                 alt='2'
               />
             </div>
             <div className='image-container'>
               <img
                 className='portfolio-image'
-                src="https://i.ibb.co/LCn1kns/3.jpg"
+                src="https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/p3.jpg?updatedAt=1721991594768"
                 alt='3'
               />
             </div>
             <div className='image-container'>
               <img
                 className='portfolio-image'
-                src="https://i.ibb.co/LCC29HP/4.jpg"
+                src="https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/p4.jpg?updatedAt=1721991594711"
                 alt='4'
               />
             </div>
