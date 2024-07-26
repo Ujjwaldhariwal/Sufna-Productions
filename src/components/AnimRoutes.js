@@ -6,6 +6,8 @@ import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
 // import the Clients component
 import Clients from '../pages/Our_Clients';
+import VideoGallery from '../pages/VideoGallery';
+import ImageGallery from '../pages/ImageGallery';
 
 
 // import routes route & useLocation hook
@@ -33,6 +35,9 @@ const AnimRoutes = () => {
         <Route path='/contact' element={<Contact />} />
         {/* Add the route for the Clients component */}
         <Route path='/clients' element={<Clients />} />
+        <Route path="/video-gallery" element={<VideoGallery />} />
+        <Route path="/image-gallery" element={<ImageGallery />} />
+
         
       </Routes>
     </AnimatePresence>

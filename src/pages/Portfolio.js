@@ -1,11 +1,7 @@
 import React, { useContext } from 'react';
-// import link
-import { Link } from 'react-router-dom';
-// import motion
+import { Link } from 'react-router-dom'; // Import Link for internal navigation
 import { motion } from 'framer-motion';
-// import transition
 import { transition1 } from '../transitions';
-// import cursor context
 import { CursorContext } from '../context/CursorContext';
 import './Portfolio.css';
 import './btn.css';
@@ -32,7 +28,6 @@ const Portfolio = () => {
             transition={transition1}
             className='flex flex-col lg:items-start'
           >
-
             <h1 className='h1'>Portfolio</h1>
             <p className='mb-12 max-w-sm'>
               Our portfolio showcases a diverse range of work including
@@ -41,19 +36,18 @@ const Portfolio = () => {
               <br />
             </p>
             <div className="portfolio-button-container">
-              <Link to="https://sufna-img.vercel.app/" target='_blank'>
+              <Link to="/image-gallery" >
                 <button className="btn-abu">
-                 <div>Photos</div>
+                  <div>Photos</div>
                 </button>
               </Link>
-              <br></br>
-              <Link to="https://sufna-vid.vercel.app/" target='_blank'>
-              <button className="btn-abu">
-                 <div>Videos</div>
+              <br />
+              <Link to="/video-gallery">
+                <button className="btn-abu">
+                  <div>Videos</div>
                 </button>
               </Link>
             </div>
-
           </motion.div>
           <div
             onMouseEnter={mouseEnterHandler}

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-primary font-secondary bg-white;
+    @apply text-primary font-secondary bg-white transition-colors duration-300;
   }
   .h1 {
     @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
@@ -17,6 +17,59 @@
   }
 }
 
-.root{
-  overflow: hidden;
+/* Dark Mode Styles */
+body.dark-mode {
+  @apply bg-gray-900 text-gray-200;
+}
+
+body.dark-mode .h1,
+body.dark-mode .section,
+body.dark-mode .btn {
+  @apply text-white;
+}
+
+body.dark-mode .video-gallery {
+  @apply text-white;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  @apply fixed top-4 right-4 bg-gray-200 dark:bg-gray-800 p-2 rounded-full shadow-md;
+}
+
+.theme-toggle-btn .sun-moon-icon {
+  @apply w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300;
+}
+
+.sun-moon-icon.sun {
+  @apply bg-yellow-400 text-yellow-800;
+}
+
+.sun-moon-icon.moon {
+  @apply bg-gray-800 text-gray-300;
+}
+
+.sun-moon-icon.sun::before {
+  content: '🌞';
+  font-size: 1.5rem;
+}
+
+.sun-moon-icon.moon::before {
+  content: '🌜';
+  font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    @apply top-2 right-2;
+  }
+
+  .sun-moon-icon {
+    @apply w-8 h-8;
+  }
+}
+
+.root {
+  @apply overflow-hidden;
 }
