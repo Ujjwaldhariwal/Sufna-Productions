@@ -13,24 +13,26 @@ const Home = () => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.addEventListener('timeupdate', handleTimeUpdate);
+    const video = videoRef.current;
+
+    const handleCanPlay = () => {
+      if (video) {
+        video.play().catch(error => {
+          console.error('Autoplay prevented:', error);
+        });
+      }
+    };
+
+    if (video) {
+      video.addEventListener('canplay', handleCanPlay);
     }
+
     return () => {
-      if (videoRef.current) {
-        videoRef.current.removeEventListener('timeupdate', handleTimeUpdate);
+      if (video) {
+        video.removeEventListener('canplay', handleCanPlay);
       }
     };
   }, []);
-
-  const handleTimeUpdate = () => {
-    if (videoRef.current) {
-      if (videoRef.current.currentTime >= videoRef.current.duration - 2) {
-        videoRef.current.currentTime = 0;
-        videoRef.current.play();
-      }
-    }
-  };
 
   return (
     <>
@@ -43,11 +45,12 @@ const Home = () => {
           className="bg-video"
           ref={videoRef}
         >
-          <source src={bgVideom} type="video/mp4" /> {/* Using imported video */}
+          <source src={bgVideom} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="main">
-          <h1 className="middle">Who Are We?
+          <h1 className="middle">
+            Who Are We?
             <div className="roller">
               <span id="rolltext">
                 Artists ?<br />
@@ -58,7 +61,7 @@ const Home = () => {
           </h1>
         </div>
       </div>
-      <br></br>
+      <br />
       <About />
       <Clients />
       <Portfolio />
@@ -70,3 +73,4 @@ const Home = () => {
 };
 
 export default Home;
+ 
