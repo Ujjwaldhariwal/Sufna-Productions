@@ -1,6 +1,7 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
 import YouTube from 'react-youtube';
+import LazyLoad from 'react-lazyload';
 import { Parallax } from 'react-parallax';
 import './VideoGallery.css';
 
@@ -70,9 +71,11 @@ const VideoGallery = () => {
                 columnClassName="my-masonry-grid_column"
               >
                 {brand.videos.map((videoId, idx) => (
-                  <div key={idx} className="video-item">
-                    <YouTube videoId={videoId} opts={{ height: '200', width: '100%' }} />
-                  </div>
+                  <LazyLoad key={idx} height={200} offset={100} once>
+                    <div className="video-item">
+                      <YouTube videoId={videoId} opts={{ height: '200', width: '100%' }} />
+                    </div>
+                  </LazyLoad>
                 ))}
               </Masonry>
             </div>

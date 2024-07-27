@@ -1,35 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Masonry from 'react-masonry-css';
 import { Parallax } from 'react-parallax';
+import LazyLoad from 'react-lazyload';
 import './ImageGallery.css';
 
-// Updated image URLs
 const images = [
-  'https://i.ibb.co/6rsL3dT/1.jpg',
-  'https://i.ibb.co/mqYs7gM/2.jpg',
-  'https://i.ibb.co/fvNZWdr/3.jpg',
-  'https://i.ibb.co/KLh1dXn/4.jpg',
-  'https://i.ibb.co/B4PTVYy/5.jpg',
-  'https://i.ibb.co/bFzGsB6/6.jpg',
-  'https://i.ibb.co/PwY15s5/7.jpg',
-  'https://i.ibb.co/X2RCTC3/8.jpg',
-  'https://i.ibb.co/Z66B9hH/9.jpg',
-  'https://i.ibb.co/X4dD2nb/10.jpg',
-  'https://i.ibb.co/5G8Y7nq/11.jpg',
-  'https://i.ibb.co/DLPwRTb/12.jpg',
-  'https://i.ibb.co/g9f29zk/13.jpg',
-  'https://i.ibb.co/mBB8Str/14.jpg',
-  'https://i.ibb.co/rxMHz3N/15.jpg',
-  'https://i.ibb.co/f89tFg2/16.jpg',
-  'https://i.ibb.co/cCD7fG8/17.jpg',
-  'https://i.ibb.co/LpR3Hrr/18.jpg',
-  'https://i.ibb.co/4KsBgvh/19.jpg',
-  'https://i.ibb.co/ZmkVscj/20.jpg',
-  'https://i.ibb.co/7Kz4yhj/21.jpg',
-  'https://i.ibb.co/0rNzBWB/22.jpg',
-  'https://i.ibb.co/M8QdgFk/23.jpg',
-  'https://i.ibb.co/mNHRW5V/25.jpg',
-  'https://i.ibb.co/LdTCHGz/26.jpg'
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/1.jpg?updatedAt=1722069423773',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/2.jpg?updatedAt=1722069437647',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/3.jpg?updatedAt=1722069354326',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/4.jpg?updatedAt=1722069470486',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/5.jpg?updatedAt=1722069468716',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/6.jpg?updatedAt=1722069461689',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/7.jpg?updatedAt=1722069475235',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/8.jpg?updatedAt=1722069359628',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/9.jpg?updatedAt=1722069361206',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/10.jpg?updatedAt=1722069477128',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/11.jpg?updatedAt=1722069457387',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/12.jpg?updatedAt=1722069371379',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/13.jpg?updatedAt=1722069374398',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/14.jpg?updatedAt=1722069377992',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/15.jpg?updatedAt=1722069381268',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/16.jpg?updatedAt=1722069406379',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/17.jpg?updatedAt=1722069426961',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/18.jpg?updatedAt=1722069425089',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/19.jpg?updatedAt=1722069429720',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/20.jpg?updatedAt=1722069432732',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/21.jpg?updatedAt=1722069431364',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/22.jpg?updatedAt=1722069353580',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/23.jpg?updatedAt=1722069352838',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/25.jpg?updatedAt=1722069353714',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/26.jpg?updatedAt=1722069352839',
 ];
 
 const breakpoints = {
@@ -38,7 +38,50 @@ const breakpoints = {
   700: 1
 };
 
+const shuffleArray = (array) => {
+  let shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
+
 const ImageGallery = () => {
+  const [shuffledImages, setShuffledImages] = useState(images);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollTimeoutRef = useRef(null);
+  const shuffleIntervalRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(true);
+      clearTimeout(scrollTimeoutRef.current);
+      scrollTimeoutRef.current = setTimeout(() => {
+        setIsScrolling(false);
+      }, 10000); // 10 seconds of no scroll
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimeoutRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isScrolling) {
+      shuffleIntervalRef.current = setInterval(() => {
+        setShuffledImages(shuffleArray(images));
+      }, 20000); // Change every 20 seconds
+    } else {
+      clearInterval(shuffleIntervalRef.current);
+    }
+
+    return () => clearInterval(shuffleIntervalRef.current);
+  }, [isScrolling]);
+
   return (
     <div className="image-gallery">
       <Parallax
@@ -54,10 +97,12 @@ const ImageGallery = () => {
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {images.map((src, idx) => (
-              <div key={idx} className="image-item">
-                <img src={src} alt={`Gallery ${idx}`} style={{ width: '100%', height: 'auto' }} />
-              </div>
+            {shuffledImages.map((src, idx) => (
+              <LazyLoad key={idx} height={200} offset={100} once>
+                <div className="image-item">
+                  <img src={src} alt={`Gallery ${idx}`} style={{ width: '100%', height: 'auto' }} />
+                </div>
+              </LazyLoad>
             ))}
           </Masonry>
         </div>
