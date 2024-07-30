@@ -19,8 +19,9 @@ const App = () => {
  
   return (
     <>
-      {showLoader && <Flower />} {/* Render the Flower loader if showLoader is true */}
-      <div style={{ display: showLoader ? 'none' : 'block' }}> {/* Hide content while loader is visible */}
+      {showLoader && <Flower />} 
+      <div style={{ display: showLoader ? 'none' : 'block' }}> 
+        
         <Router>
           <Header />
           <AnimRoutes />

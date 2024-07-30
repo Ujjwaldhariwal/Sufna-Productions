@@ -7,18 +7,20 @@ import './ImageGallery.css';
 const images = [
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/1.jpg?updatedAt=1722069423773',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/2.jpg?updatedAt=1722069437647',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/DSC07023.jpg?updatedAt=1722362352105',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/3.jpg?updatedAt=1722069354326',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/4.jpg?updatedAt=1722069470486',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/5.jpg?updatedAt=1722069468716',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/6.jpg?updatedAt=1722069461689',
-  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/7.jpg?updatedAt=1722069475235',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/8.jpg?updatedAt=1722069359628',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/9.jpg?updatedAt=1722069361206',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/10.jpg?updatedAt=1722069477128',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/11.jpg?updatedAt=1722069457387',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/DSC07103.jpg?updatedAt=1722362350967',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/12.jpg?updatedAt=1722069371379',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/13.jpg?updatedAt=1722069374398',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/14.jpg?updatedAt=1722069377992',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/DSC07223.jpg?updatedAt=1722362349867',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/15.jpg?updatedAt=1722069381268',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/16.jpg?updatedAt=1722069406379',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/17.jpg?updatedAt=1722069426961',
@@ -30,6 +32,8 @@ const images = [
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/23.jpg?updatedAt=1722069352838',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/25.jpg?updatedAt=1722069353714',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/26.jpg?updatedAt=1722069352839',
+  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/DSC07260.jpg?updatedAt=1722362346207'
+
 ];
 
 const breakpoints = {
@@ -91,7 +95,7 @@ const ImageGallery = () => {
         strength={200}
       >
         <div className="parallax-content">
-          <h1>Artistic Image Gallery</h1>
+          <h1>Image Gallery</h1>
           <Masonry
             breakpointCols={breakpoints}
             className="my-masonry-grid"

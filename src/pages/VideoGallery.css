@@ -1,8 +1,11 @@
 /* VideoGallery.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap');
+
 .video-gallery {
   position: relative;
   overflow: hidden;
-  font-family: 'Arial', sans-serif;
+  /* font-family: 'Zain', ExtraBold; */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -19,9 +22,10 @@
 
 /* Title Styling */
 .parallax-content h1 {
+  
   margin-top: 50px;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: light;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -32,6 +36,7 @@
 }
 
 .brand-section h2 {
+  font-family: 'Zain', ExtraBold;
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: bold;
@@ -55,7 +60,6 @@
   margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 -9px 20px rgba(177, 231, 249, 0.881), 0 4px 15px rgb(122, 253, 181); /* Brighter pastel gradient box shadow */
 }
 
 /* Responsive Design */

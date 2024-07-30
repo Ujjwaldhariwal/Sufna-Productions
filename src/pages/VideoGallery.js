@@ -73,7 +73,11 @@ const VideoGallery = () => {
                 {brand.videos.map((videoId, idx) => (
                   <LazyLoad key={idx} height={200} offset={100} once>
                     <div className="video-item">
-                      <YouTube videoId={videoId} opts={{ height: '200', width: '100%' }} />
+                      <YouTube
+                        videoId={videoId}
+                        opts={{ height: '200', width: '100%', playerVars: { 'autoplay': 0, 'controls': 1 } }}
+                        containerClassName="youtube-container"
+                      />
                     </div>
                   </LazyLoad>
                 ))}
