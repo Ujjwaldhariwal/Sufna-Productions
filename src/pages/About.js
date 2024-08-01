@@ -40,7 +40,7 @@ const About = () => {
             className='flex-1 pt-20 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col  items-center lg:items-start connect-section'
           >
             <h1 className='h1'>About Us</h1>
-            <p className='mb-12 max-w-sm'>
+            <p className='mb-12 text-xl'>
               At Sufna Productions, we're not just another media production agency - we're the
               <b> storytellers, the visionaries</b> and the creative engine that brings your brand's narrative to life.
               <br />
