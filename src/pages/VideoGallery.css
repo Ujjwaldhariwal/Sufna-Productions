@@ -102,11 +102,19 @@
   }
 
   .parallax-content h1 {
+<<<<<<< HEAD
     font-size: 4rem;
   }
 
   .brand-section h2 {
     font-size: 3rem;
+=======
+    font-size: 3rem;
+  }
+
+  .brand-section h2 {
+    font-size: 2.5rem;
+>>>>>>> 64f59083c33d17f5860c7f0899731bcda96fb391
   }
 }
 
