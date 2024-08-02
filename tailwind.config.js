@@ -10,12 +10,12 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1192px',
+      '4xl': '1920px', // Added custom screen size
     },
     extend: {
       colors: {
         primary: '#0E1112',
         grey: '#484B4B',
-
         accent: '#EEF7F9',
       },
     },

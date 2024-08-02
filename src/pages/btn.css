@@ -66,11 +66,12 @@
   /* PORTFOLIO BUTTONS */
 
 .portfolio-button-container {
-  margin-left: 80px;
+  /* margin-left: 80px; */
   margin-bottom: 40px;
   display: flex;
   max-width: 600px; /* Limiting the width for responsiveness */
   width: 100%; /* Ensure full width on smaller screens */
+  column-gap:15px;
 }
 .portfolio-button-container .portfolio-button {
   margin-right: 5px; 

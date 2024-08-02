@@ -39,6 +39,10 @@
 
   .h1 {
     margin-top: 0;
+    font-size: 2em; /* Adjust font size for mobile */
+  }
+  .portfolio-button-container{
+    margin-left: 80px;
   }
 }
 
@@ -60,7 +64,10 @@
 
   .h1 {
     margin-top: 20px; /* Add margin as needed */
-    font-size: 4em; /* Adjust font size for better visibility */
+    font-size: 4em; /* Adjust font size for larger screens */
+  }
+  .portfolio-button-container{
+    margin-left: 80px;
   }
 }
 
@@ -78,6 +85,37 @@
   .h1 {
     margin-top: 40px; /* Add more margin */
     font-size: 5em; /* Increase font size for better visibility */
+  }
+  .portfolio-button-container{
+    margin-left: 80px;
+  }
+}
+
+/* Ultra-Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+  .section {
+    padding-top: 60px; /* More padding for very large screens */
+  }
+
+  .container {
+    margin-top: 60px; /* Adjust margin as needed */
+    flex-direction: row; /* Ensure row layout for very large screens */
+    justify-content: space-evenly; /* Even spacing */
+  }
+
+  .h1 {
+    margin-top: 60px; /* More margin for better spacing */
+    font-size: 6em; /* Larger font size for ultra-large screens */
+  }
+
+  .portfolio-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  .portfolio-button-container{
+    margin-left: 80px;
+    size: 200px;
   }
 }
 

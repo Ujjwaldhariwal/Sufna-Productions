@@ -29,7 +29,7 @@ const Portfolio = () => {
             className='flex flex-col lg:items-start'
           >
             <h1 className='h1'>Portfolio</h1>
-            <p className='mb-12 max-w-sm'>
+            <p className=''>
               Our portfolio showcases a diverse range of work including
               <b style={{ color: '#0a5647' }}> photoshoots, ad campaigns, brand shoots</b> and more.
               <br />
