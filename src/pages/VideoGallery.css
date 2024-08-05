@@ -3,7 +3,6 @@
 .video-gallery {
   position: relative;
   overflow: hidden;
-  /* font-family: 'Zain', ExtraBold; */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -86,6 +85,9 @@
   .my-masonry-grid_column {
     padding-left: 20px;
   }
+  .brand-section h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -102,54 +104,60 @@
   }
 
   .parallax-content h1 {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   .brand-section h2 {
-    font-size: 3rem;
-    font-size: 3rem;
-  }
-
-  .brand-section h2 {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width:1920px){
+@media (max-width: 480px) {
+  .my-masonry-grid {
+    margin-left: -5px;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: 5px;
+  }
+
+  .parallax-content {
+    padding: 10px;
+  }
+
+  .parallax-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .brand-section h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1920px) {
   .brand-section h2 {
     font-family: 'Zain', ExtraBold;
     font-size: 4rem;
-    margin-bottom: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
+    
   }
 
   .parallax-content h1 {
     margin-top: 50px;
     font-size: 5rem;
-    font-weight: light;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+   
   }
-
+ 
 }
 
-
-@media (max-width:2560px){
+@media (max-width: 2560px) {
   .brand-section h2 {
     font-family: 'Zain', ExtraBold;
-    font-size: 4rem;
+    font-size: 2rem;
     margin-bottom: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
   }
-
   .parallax-content h1 {
-    margin-top: 50px;
-    font-size: 5rem;
-    font-weight: light;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    
+    font-size: 1.9rem;
+    
   }
-
 }
