@@ -1,4 +1,3 @@
-// SocialIcons.js
 
 import React from 'react';
 
@@ -27,7 +26,7 @@ class SocialIcons extends React.Component {
   }
 
   handleResize() {
-    const isMobile = window.innerWidth <= 768; // Adjust the breakpoint as needed
+    const isMobile = window.innerWidth <= 768; 
     this.setState({ isMobileView: isMobile });
   }
 
@@ -45,7 +44,7 @@ class SocialIcons extends React.Component {
       );
     }
 
-    return null; // Return null if not in mobile view or no social links provided
+    return null; 
   }
 
   render() {
