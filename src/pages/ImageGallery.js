@@ -13,13 +13,11 @@ const images = [
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/5.jpg?updatedAt=1722069468716',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/6.jpg?updatedAt=1722069461689',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/8.jpg?updatedAt=1722069359628',
-  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/9.jpg?updatedAt=1722069361206',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/10.jpg?updatedAt=1722069477128',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/11.jpg?updatedAt=1722069457387',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/DSC07103.jpg?updatedAt=1722362350967',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/12.jpg?updatedAt=1722069371379',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/13.jpg?updatedAt=1722069374398',
-  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/14.jpg?updatedAt=1722069377992',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/DSC07223.jpg?updatedAt=1722362349867',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/15.jpg?updatedAt=1722069381268',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/16.jpg?updatedAt=1722069406379',
@@ -33,7 +31,6 @@ const images = [
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/25.jpg?updatedAt=1722069353714',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/26.jpg?updatedAt=1722069352839',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/DSC07260.jpg?updatedAt=1722362346207'
-
 ];
 
 const breakpoints = {
@@ -42,20 +39,9 @@ const breakpoints = {
   700: 1
 };
 
-const shuffleArray = (array) => {
-  let shuffledArray = [...array];
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-  }
-  return shuffledArray;
-};
-
 const ImageGallery = () => {
-  const [shuffledImages, setShuffledImages] = useState(images);
   const [isScrolling, setIsScrolling] = useState(false);
   const scrollTimeoutRef = useRef(null);
-  const shuffleIntervalRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,18 +60,6 @@ const ImageGallery = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (!isScrolling) {
-      shuffleIntervalRef.current = setInterval(() => {
-        setShuffledImages(shuffleArray(images));
-      }, 20000); // Change every 20 seconds
-    } else {
-      clearInterval(shuffleIntervalRef.current);
-    }
-
-    return () => clearInterval(shuffleIntervalRef.current);
-  }, [isScrolling]);
-
   return (
     <div className="image-gallery">
       <Parallax
@@ -101,7 +75,7 @@ const ImageGallery = () => {
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {shuffledImages.map((src, idx) => (
+            {images.map((src, idx) => (
               <LazyLoad key={idx} height={200} offset={100} once>
                 <div className="image-item">
                   <img src={src} alt={`Gallery ${idx}`} style={{ width: '100%', height: 'auto' }} />

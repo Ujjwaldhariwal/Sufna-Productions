@@ -1,10 +1,6 @@
 import React, { useContext } from 'react';
 // import link
 import { Link } from 'react-router-dom';
-// import motion
-import { motion } from 'framer-motion';
-// import transition
-import { transition1 } from '../transitions';
 // import cursor context
 import { CursorContext } from '../context/CursorContext';
 import './btn.css';
@@ -13,13 +9,7 @@ import './about.css';
 const About = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
   return (
-    <motion.section
-      initial={{ opacity: 0, y: '100%' }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: '100%' }}
-      transition={transition1}
-      className='section'
-    >
+    <section className='section'>
       <div
         onMouseEnter={mouseEnterHandler}
         onMouseLeave={mouseLeaveHandler}
@@ -32,13 +22,7 @@ const About = () => {
             <img src="https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/dhr1%20(1).jpg?updatedAt=1721991344486" alt="About Us" />
           </div>
           {/* text */}
-          <motion.div
-            initial={{ opacity: 0, y: '-80%' }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: '-80%' }}
-            transition={transition1}
-            className='flex-1 pt-20 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col items-center lg:items-start connect-section'
-          >
+          <div className='flex-1 pt-20 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col items-center lg:items-start connect-section'>
             <h1 className='h1'>About Us</h1>
             <p className='mb-12 max-w-sm para'>
               At Sufna Productions, we're not just another media production agency - we're the
@@ -53,10 +37,10 @@ const About = () => {
                 <div> Our Work</div>
               </button>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

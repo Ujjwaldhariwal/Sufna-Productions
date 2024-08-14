@@ -1,7 +1,7 @@
 .image-gallery {
   position: relative;
   overflow: hidden;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Zain', ExtraBold;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -11,13 +11,15 @@
   position: relative;
   padding: 50px;
   text-align: center;
-  color: #333;
+  color: #0a5647;
   font-family: primary;
   background: rgba(255, 255, 255, 0.8);
   transition: background-color 0.3s, color 0.3s;
 }
 
 .parallax-content h1 {
+  font-family: 'Zain', ExtraBold;
+  font-size: 50px;
   margin-top: 80px;
   margin-bottom: 50px;
 }
@@ -53,6 +55,46 @@
 }
 
 /* Responsive Design */
+
+/* Extra Large Screens (4K/5K) */
+@media (min-width: 2560px) {
+  .my-masonry-grid {
+    margin-left: -40px;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: 40px;
+  }
+
+  .parallax-content {
+    padding: 70px;
+  }
+
+  .parallax-content h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Large Screens (1080p) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .my-masonry-grid {
+    margin-left: -30px;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: 30px;
+  }
+
+  .parallax-content {
+    padding: 50px;
+  }
+
+  .parallax-content h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Medium Screens (Laptop/Tablets) */
 @media (max-width: 1100px) {
   .my-masonry-grid {
     margin-left: -20px;
@@ -63,6 +105,7 @@
   }
 }
 
+/* Small Screens (Mobile) */
 @media (max-width: 700px) {
   .my-masonry-grid {
     margin-left: -10px;
