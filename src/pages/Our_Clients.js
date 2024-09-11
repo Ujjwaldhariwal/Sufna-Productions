@@ -3,19 +3,19 @@ import './Clients.css';
 import LazyLoad from 'react-lazyload';
 
 const clients = [
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/lifeline.jpg?updatedAt=1722362847245' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/educaptain.jpg?updatedAt=1722363391309' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/Youglas.jpg?updatedAt=1722363040611' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/atls.webp?updatedAt=1722360727002' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/2.png?updatedAt=1721990905385' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/4.png?updatedAt=1721990377578' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/5.png?updatedAt=1721990377554' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/6.png?updatedAt=1721990377826' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/7.png?updatedAt=1721990377711' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/8.png?updatedAt=1721990377475' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/9.png?updatedAt=1721990377540' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/10.png?updatedAt=1721990905280' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/Froexastra.jpg?updatedAt=1722363039983' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/lifeline.jpg?updatedAt=1723621053485' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/educaptain.jpg?updatedAt=1723620700547' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/Youglas.jpg?updatedAt=1723621045298' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/atls.webp?updatedAt=1723621056824' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/slash.png?updatedAt=1723620871960' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/wow.png?updatedAt=1723620892189' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/music.png?updatedAt=1723620915138' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/oswal.png?updatedAt=1723620935242' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/ifysi.png?updatedAt=1723621015690' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/an.png?updatedAt=1723620966302' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/Froexastra.jpg?updatedAt=1723621048849' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/yakuza.png?updatedAt=1723620830147' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/classplus.png?updatedAt=1723620986884' },
 ];
 
 const Clients = () => {
