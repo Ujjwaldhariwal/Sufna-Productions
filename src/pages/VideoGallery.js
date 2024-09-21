@@ -76,7 +76,7 @@ const VideoGallery = () => {
                       <div className="video-responsive">
                         <YouTube
                           videoId={videoId}
-                          opts={{ playerVars: { 'autoplay': 0, 'controls': 1 } }}
+                          opts={{ playerVars: { 'autoplay': 0, 'controls': 1, 'rel': 0 } }}
                           containerClassName="youtube-container"
                         />
                       </div>

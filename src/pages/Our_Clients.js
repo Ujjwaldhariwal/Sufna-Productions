@@ -3,16 +3,20 @@ import './Clients.css';
 import LazyLoad from 'react-lazyload';
 
 const clients = [
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/lifeline.jpg?updatedAt=1723621053485' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/educaptain.jpg?updatedAt=1723620700547' },
-  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/Youglas.jpg?updatedAt=1723621045298' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/atls.webp?updatedAt=1723621056824' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/lifeline.jpg?updatedAt=1723621053485' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/Froexastra.jpg?updatedAt=1723621048849' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/Youglas.jpg?updatedAt=1723621045298' },
+
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/slash.png?updatedAt=1723620871960' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/wow.png?updatedAt=1723620892189' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/music.png?updatedAt=1723620915138' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/oswal.png?updatedAt=1723620935242' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/ifysi.png?updatedAt=1723621015690' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/an.png?updatedAt=1723620966302' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/classplus.png?updatedAt=1723620986884' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/yakuza.png?updatedAt=1723620830147' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/educaptain.jpg?updatedAt=1723620700547' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/Froexastra.jpg?updatedAt=1723621048849' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/yakuza.png?updatedAt=1723620830147' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/classplus.png?updatedAt=1723620986884' },
@@ -37,5 +41,6 @@ const Clients = () => {
     </>
   );
 };
+
 
 export default Clients;

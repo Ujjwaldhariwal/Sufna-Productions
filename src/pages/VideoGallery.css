@@ -6,40 +6,37 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Parallax Background */
 .parallax-content {
   position: relative;
   padding: 50px;
   text-align: center;
   color: #0a5647;
-  font-family: primary;
+  font-family: 'Zain', sans-serif;
   background: rgb(255, 255, 255);
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Title Styling */
 .parallax-content h1 {
+  font-family: 'Zain', sans-serif;
   margin-top: 50px;
   font-size: 3rem;
-  font-weight: light;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 
-/* Brand Section */
 .brand-section {
   margin-bottom: 40px;
 }
 
 .brand-section h2 {
-  font-family: 'Zain', ExtraBold;
+  font-family: 'Zain', sans-serif;
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-/* Masonry Grid */
 .my-masonry-grid {
   display: flex;
   margin-left: -30px; /* gutter size offset */
@@ -51,14 +48,12 @@
   background-clip: padding-box;
 }
 
-/* Video Item Styling */
 .video-item {
   margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
 }
 
-/* Responsive Video Container */
 .video-responsive {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -76,42 +71,7 @@
   height: 100%;
 }
 
-/* Responsive Design */
-@media (max-width: 1100px) {
-  .my-masonry-grid {
-    margin-left: -20px;
-  }
-
-  .my-masonry-grid_column {
-    padding-left: 20px;
-  }
-  .brand-section h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .my-masonry-grid {
-    margin-left: -10px;
-  }
-
-  .my-masonry-grid_column {
-    padding-left: 10px;
-  }
-
-  .parallax-content {
-    padding: 20px;
-  }
-
-  .parallax-content h1 {
-    font-size: 2rem;
-  }
-
-  .brand-section h2 {
-    font-size: 1.2rem;
-  }
-}
-
+/* Mobile Devices */
 @media (max-width: 480px) {
   .my-masonry-grid {
     margin-left: -5px;
@@ -134,30 +94,95 @@
   }
 }
 
-@media (max-width: 1920px) {
-  .brand-section h2 {
-    font-family: 'Zain', ExtraBold;
-    font-size: 4rem;
-    
+/* Tablets */
+@media (max-width: 768px) {
+  .my-masonry-grid {
+    margin-left: -15px;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: 15px;
+  }
+
+  .parallax-content {
+    padding: 20px;
   }
 
   .parallax-content h1 {
-    margin-top: 50px;
-    font-size: 5rem;
-   
+    font-size: 2rem;
   }
- 
+
+  .brand-section h2 {
+    font-size: 1.5rem;
+  }
 }
 
-@media (max-width: 2560px) {
-  .brand-section h2 {
-    font-family: 'Zain', ExtraBold;
-    font-size: 2rem;
-    margin-bottom: 25px;
+/* Small Laptops/Desktops */
+@media (max-width: 1024px) {
+  .my-masonry-grid {
+    margin-left: -20px;
   }
+
+  .my-masonry-grid_column {
+    padding-left: 20px;
+  }
+
+  .brand-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Large Desktops */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .brand-section h2 {
+    font-size: 2rem;
+  }
+
   .parallax-content h1 {
-    
+    font-size: 3.5rem;
+  }
+}
+
+/* Beyond 1200px */
+@media (min-width: 1201px) {
+  .brand-section h2 {
     font-size: 1.9rem;
-    
+  }
+
+  .parallax-content h1 {
+    font-size: 3rem;
+  }
+}
+
+/* 4K Screens */
+@media (min-width: 2561px) {
+  .brand-section h2 {
+    font-size: 4rem;
+  }
+
+  .parallax-content h1 {
+    font-size: 7rem;
+  }
+}
+
+/* 5K Screens */
+@media (min-width: 3841px) {
+  .brand-section h2 {
+    font-size: 4rem;
+  }
+
+  .parallax-content h1 {
+    font-size: 7rem;
+  }
+}
+
+/* 8K Screens */
+@media (min-width: 5121px) {
+  .brand-section h2 {
+    font-size: 4rem;
+  }
+
+  .parallax-content h1 {
+    font-size: 7rem;
   }
 }

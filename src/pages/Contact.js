@@ -1,6 +1,4 @@
 import React, { useContext } from 'react';
-import { motion } from 'framer-motion';
-import { transition1 } from '../transitions';
 import { CursorContext } from '../context/CursorContext';
 import './btn.css';
 import './contact.css'; // Import the new CSS file
@@ -18,23 +16,11 @@ const Contact = () => {
   };
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: '100%' }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: '100%' }}
-      transition={transition1}
-      className='section bg-white'
-    >
+    <section className='section bg-white'>
       <div className='container mx-auto h-full'>
         <div className='flex flex-col lg:flex-row h-full items-center justify-start pt-32 gap-x-8 text-center lg:text-left'>
           {/* bg */}
-          <motion.div
-            initial={{ opacity: 0, y: '100%' }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: '100%' }}
-            transition={transition1}
-            className='hidden lg:flex bg-[#f5f5f5] absolute bottom-0 left-0 right-0 top-72 -z-10'
-          ></motion.div>
+          <div className='hidden lg:flex bg-[#f5f5f5] absolute bottom-0 left-0 right-0 top-72 -z-10'></div>
           {/* text & form */}
           <div
             onMouseEnter={mouseEnterHandler}
@@ -66,20 +52,16 @@ const Contact = () => {
             </div>
           </div>
           {/* image */}
-          <motion.div
+          <div
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            initial={{ opacity: 0, y: '100%' }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: '100%' }}
-            transition={{ transition: transition1, duration: 1.5 }}
             className='lg:flex-1'
           >
             <img src='https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/dhr2.png?updatedAt=1721991035408' alt='Contact' className='woman-img' />
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

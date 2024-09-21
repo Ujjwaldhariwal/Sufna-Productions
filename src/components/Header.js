@@ -10,25 +10,26 @@ const Header = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
+  const scrollThreshold = 20; // Minimum scroll distance before hiding
 
   const handleScroll = debounce(() => {
     const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY) {
+    if (currentScrollY > lastScrollY + scrollThreshold) {
       // Scrolling down
       setShowHeader(false);
-    } else {
+    } else if (currentScrollY < lastScrollY - scrollThreshold) {
       // Scrolling up
       setShowHeader(true);
     }
     setLastScrollY(currentScrollY);
-  }, 10); // Adjust the debounce delay if needed
+  }, 50); // Adjust the debounce delay if needed
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [handleScroll]); // Include handleScroll in dependencies
+  }, [handleScroll]);
 
   return (
     <header
