@@ -7,6 +7,7 @@ const clients = [
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/lifeline.jpg?updatedAt=1723621053485' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/Froexastra.jpg?updatedAt=1723621048849' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/Youglas.jpg?updatedAt=1723621045298' },
+
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/slash.png?updatedAt=1723620871960' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/wow.png?updatedAt=1723620892189' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/music.png?updatedAt=1723620915138' },
@@ -16,6 +17,9 @@ const clients = [
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/classplus.png?updatedAt=1723620986884' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/yakuza.png?updatedAt=1723620830147' },
   { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/educaptain.jpg?updatedAt=1723620700547' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/Froexastra.jpg?updatedAt=1723621048849' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/yakuza.png?updatedAt=1723620830147' },
+  { img: 'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/logos/classplus.png?updatedAt=1723620986884' },
 ];
 
 const Clients = () => {
