@@ -18,7 +18,7 @@ const images = [
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/11.jpg?updatedAt=1722069457387',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/DSC07103.jpg?updatedAt=1722362350967',
 
-  'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/13.jpg?updatedAt=1722069374398',
+
 
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/DSC07223.jpg?updatedAt=1722362349867',
   'https://ik.imagekit.io/UjjwalDhariwal/Sufna%20PRoductions/15.jpg?updatedAt=1722069381268',
